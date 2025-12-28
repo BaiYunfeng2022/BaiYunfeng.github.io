@@ -19,9 +19,9 @@ title: 首页
 - 版本控制 (Git)
 
 ## 📫 联系我
-- GitHub: [@funny-jun](https://github.com/BaiYunfeng)
+- GitHub: [@BaiYunfeng](https://github.com/BaiYunfeng)
 - 邮箱: your-email@example.com
-- 个人网站: [funny-jun.github.io](https://BaiYunfeng.github.io)
+- 个人网站: [BaiYunfeng.github.io](https://BaiYunfeng.github.io)
 
 ## 📂 项目展示
 欢迎查看我的其他项目！
