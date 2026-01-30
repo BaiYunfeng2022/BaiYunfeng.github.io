@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BaiYunfeng · 个人空间</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>•</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶栏 -->
+        <header class="header">
+            <div class="header-left">
+                <a href="/" class="logo">•</a>
+            </div>
+            <nav class="nav">
+                <a href="/">首页</a>
+                <a href="#work">作品</a>
+                <a href="about.html">关于</a>
+            </nav>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 简介区 -->
+            <section class="intro">
+                <h1 class="intro-title">
+                    你好，我是
+                    <span class="highlight"> BaiYunfeng</span>
+                </h1>
+                <p class="intro-subtitle">
+                    专注创造简洁而有效的数字体验
+                </p>
+                <p class="intro-description">
+                    极简主义爱好者，相信少即是多。
+                    专注于Web开发、用户体验设计和干净代码。
+                </p>
+            </section>
+
+            <!-- 作品展示 -->
+            <section class="work" id="work">
+                <h2 class="section-title">近期作品</h2>
+                <div class="work-grid">
+                    <article class="work-item">
+                        <h3>个人博客系统</h3>
+                        <p>使用纯HTML/CSS构建的极简博客，无JavaScript依赖。</p>
+                        <span class="work-tag">静态网站</span>
+                    </article>
+
+                    <article class="work-item">
+                        <h3>字体配对工具</h3>
+                        <p>帮助设计师选择完美字体组合的简单工具。</p>
+                        <span class="work-tag">设计工具</span>
+                    </article>
+
+                    <article class="work-item">
+                        <h3>呼吸训练器</h3>
+                        <p>一个帮助放松和集中注意力的极简应用。</p>
+                        <span class="work-tag">健康应用</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact">
+                <h2 class="section-title">保持联系</h2>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link">
+                        邮件
+                    </a>
+                    <a href="https://github.com/username" class="contact-link">
+                        GitHub
+                    </a>
+                    <a href="#" class="contact-link">
+                        微博
+                    </a>
+                </div>
+                <p class="contact-note">
+                    通常会在24小时内回复邮件
+                </p>
+            </section>
+
+            <!-- 最新文章 -->
+            <section class="writing">
+                <h2 class="section-title">最近思考</h2>
+                <div class="writing-list">
+                    <article class="writing-item">
+                        <time datetime="2023-11-15">2025.11.15</time>
+                        <h3><a href="#">为什么我喜欢极简设计</a></h3>
+                        <p>探讨极简主义在数字产品中的价值。</p>
+                    </article>
+
+                    <article class="writing-item">
+                        <time datetime="2023-10-28">2023.10.28</time>
+                        <h3><a href="#">静态网站的时代</a></h3>
+                        <p>重新发现静态网站的优雅和效率。</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>© <span id="current-year"></span> BaiYunfeng. 所有内容均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享许可</a>.</p>
+            <p class="footer-note">本网站使用GitHub Pages部署，无追踪，无广告。</p>
+        </footer>
+    </div>
+
+    <!-- 极简JavaScript -->
+    <script>
+        // 自动更新年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 极简的交互动画
+        document.querySelectorAll('.work-item, .writing-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
